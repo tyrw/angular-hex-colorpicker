@@ -4,7 +4,7 @@ angular.module('hex.colorpicker').directive('hexColorpicker', function() {
   return {
     template: '<div style="width:236px; height: 200px; position: relative;">' +
       '<img style="margin-right:2px;" src="http://www.w3schools.com/tags/colormap.gif" usemap="#colormap">' +
-      '<div style="position: relative; width: 21px; height: 21px; background-image: url(http://www.w3schools.com/tags/selectedcolor.gif);" ng-hide="!!posX || !!posY" ng-style="{ left: posX, top: posY }">' +
+      '<div style="position: relative; width: 21px; height: 21px; background-image: url(http://www.w3schools.com/tags/selectedcolor.gif);" ng-hide="!posX || !posY" ng-style="{ left: posX, top: posY }">' +
       '</div>' +
       '<map id="colormap" name="colormap" style="cursor:pointer">' +
       '<area ng-repeat="area in areas" shape="poly" coords="{{ area.coords }}" ng-click="selectArea(area)">' +
